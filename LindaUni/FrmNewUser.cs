@@ -34,7 +34,7 @@ namespace LindaUni
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //TODO: Implement Cancel
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

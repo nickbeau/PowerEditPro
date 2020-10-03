@@ -32,7 +32,7 @@ namespace LindaUni
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            //TODO: Remove on Load Event
+          
             menuStrip1.MdiWindowListItem = WindowStripMenuItem1;
 
         }
@@ -58,7 +58,8 @@ namespace LindaUni
 
         private void saveAsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            //TODO: Implement SaveAS
+            FrmTxtEdit currentform = (FrmTxtEdit)this.ActiveMdiChild;
+            currentform.SaveAS();
         }
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -89,7 +90,7 @@ namespace LindaUni
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //TODO: Implement Exit
+            SplashForm.Close();
         }
 
         private void undoToolStripMenuItem_Click(object sender, EventArgs e)

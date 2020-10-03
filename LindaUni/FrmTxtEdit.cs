@@ -85,7 +85,7 @@ namespace LindaUni
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            //TODO: Save File
+         
             string filename = ((SaveFileDialog)sender).FileName;
             System.IO.File.WriteAllText(filename, richTextBox1.Rtf);
             FileName = filename;
@@ -122,7 +122,12 @@ namespace LindaUni
             this.Text = $"Text Edit - {FileName}";
         }
 
+        public void SaveAS()
+        {
+            saveFileDialog1.Filter = "Rich Text Files (*.rtf)|*.rtf";
 
+            saveFileDialog1.ShowDialog();
+        }
         /// <summary>
         /// Saves the File
         /// </summary>
