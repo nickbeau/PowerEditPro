@@ -34,7 +34,7 @@ namespace LindaUni
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            //TODO: Implement Cancel
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -62,6 +62,11 @@ namespace LindaUni
         }
 
         private void FrmNewUser_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboUseType_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

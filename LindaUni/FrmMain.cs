@@ -33,6 +33,8 @@ namespace LindaUni
         private void FrmMain_Load(object sender, EventArgs e)
         {
             //TODO: Remove on Load Event
+            menuStrip1.MdiWindowListItem = WindowStripMenuItem1;
+
         }
 
         private void openToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -50,18 +52,74 @@ namespace LindaUni
         {
             saveFileDialog1.Filter = "Rich Text Files (*.rtf)|*.rtf";
             FrmTxtEdit currentform = (FrmTxtEdit)this.ActiveMdiChild;
-
+            currentform.saveFile();
 
         }
 
         private void saveAsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            //TODO: Implement SaveAS
         }
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             SplashForm.Close();
+        }
+
+        private void WindowStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 myaboutbox = new AboutBox1();
+            myaboutbox.ShowDialog();
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //TODO: Implement Print
+        }
+
+        private void printPreviewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //TODO: Implement Print Preview
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //TODO: Implement Exit
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //TODO: Implement Undo
+        }
+
+        private void redoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //TODO: Implement REDO
+        }
+
+        private void cutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //TODO: Implement CUT
+        }
+
+        private void copyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //TODO: Implement COPY
+        }
+
+        private void pasteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //TODO: Implement Paste
+        }
+
+        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //TODO: Implement SELECT ALL
         }
     }
 }

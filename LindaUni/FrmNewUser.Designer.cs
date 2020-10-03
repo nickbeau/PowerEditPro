@@ -157,6 +157,7 @@ namespace LindaUni
             this.comboUseType.Name = "comboUseType";
             this.comboUseType.Size = new System.Drawing.Size(452, 46);
             this.comboUseType.TabIndex = 7;
+            this.comboUseType.SelectedIndexChanged += new System.EventHandler(this.comboUseType_SelectedIndexChanged);
             // 
             // label1
             // 

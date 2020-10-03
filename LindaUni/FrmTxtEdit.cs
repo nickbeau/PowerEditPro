@@ -12,6 +12,9 @@ namespace LindaUni
 {
     public partial class FrmTxtEdit : Form
     {
+        private int NumberUndos = 20;
+        private List<string> undos;
+        private int undocounter;
         public User thisUser { get; set; }
         public string FormText { get; set; }
         public string FileName { get; set; }
@@ -21,24 +24,58 @@ namespace LindaUni
             FileName = $"New File";
             InitializeComponent();
             this.Text = $"Text Edit - {FileName}";
+            undos = new List<string>();
         }
 
+        /// <summary>
+        /// Creates a new instance of the FrmTxtEdit Form with the chosn filename
+        /// </summary>
+        /// <param name="fileName"></param>
         public FrmTxtEdit(string fileName)
         {
-            //TODO: Open File
+ 
             FileName = fileName;
             
             InitializeComponent();
             this.Text = $"Text Edit - {FileName}";
-            richTextBox1.LoadFile(fileName);
+            richTextBox1.LoadFile(fileName,RichTextBoxStreamType.RichText);
             this.Text = $"Text Edit - {FileName}";
 
         }
 
+        /// <summary>
+        /// Occurs when text has changed. Sets dirty to true adds a * to the title of the window and performs undo recording
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
             IsDirty = true;
             this.Text = $"Text Edit - {FileName} *";
+            if(undocounter<=NumberUndos)
+            {
+                undos.Add(richTextBox1.Rtf);
+                undocounter++;
+            }
+            else
+            {
+                for(int i=0;i<undocounter;i++)
+                {
+                    undos[i] = undos[i + 1];
+                }
+                undocounter = undocounter - 1;
+                undos[undocounter] = richTextBox1.Rtf;
+            }
+        }
+
+        public void undo()
+        {
+            //TODO: Implement Undo
+        }
+
+        public void redo()
+        {
+//TODO: Implement Redo
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -69,6 +106,8 @@ namespace LindaUni
             {
                 richTextBox1.Enabled = false;
             }
+            tsUserName.Text = $"User: {thisUser.UserName} [{thisUser.FirstName} {thisUser.LastName}]";
+
         }
 
         /// <summary>
@@ -177,6 +216,7 @@ namespace LindaUni
         private void tsFont_Click(object sender, EventArgs e)
         {
             fontDialog1.ShowDialog();
+            //TODO: Implement Font Application
 
         }
     }

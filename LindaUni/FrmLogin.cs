@@ -24,8 +24,6 @@ namespace LindaUni
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //TODO: Check Login correct
-            //Okay
 
             User thisuser = UserList.Where(a => a.UserName == txtUserName.Text).First();
             //Check password.

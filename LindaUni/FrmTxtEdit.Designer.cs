@@ -33,6 +33,8 @@ namespace LindaUni
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.tsUserName = new System.Windows.Forms.ToolStripLabel();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.tsOpen = new System.Windows.Forms.ToolStripButton();
             this.tsSave = new System.Windows.Forms.ToolStripButton();
             this.tsSaveAs = new System.Windows.Forms.ToolStripButton();
@@ -40,8 +42,6 @@ namespace LindaUni
             this.tsItalic = new System.Windows.Forms.ToolStripButton();
             this.tsUnderline = new System.Windows.Forms.ToolStripButton();
             this.tsFont = new System.Windows.Forms.ToolStripButton();
-            this.tsUserName = new System.Windows.Forms.ToolStripLabel();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +78,12 @@ namespace LindaUni
             // 
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
+            // tsUserName
+            // 
+            this.tsUserName.Name = "tsUserName";
+            this.tsUserName.Size = new System.Drawing.Size(92, 28);
+            this.tsUserName.Text = "userName";
+            // 
             // tsOpen
             // 
             this.tsOpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -86,6 +92,7 @@ namespace LindaUni
             this.tsOpen.Name = "tsOpen";
             this.tsOpen.Size = new System.Drawing.Size(34, 28);
             this.tsOpen.Text = "toolStripButton1";
+            this.tsOpen.ToolTipText = "Open a New File in this window";
             // 
             // tsSave
             // 
@@ -94,7 +101,8 @@ namespace LindaUni
             this.tsSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsSave.Name = "tsSave";
             this.tsSave.Size = new System.Drawing.Size(34, 28);
-            this.tsSave.Text = "toolStripButton2";
+            this.tsSave.Text = "Save";
+            this.tsSave.ToolTipText = "Save";
             this.tsSave.Click += new System.EventHandler(this.tsSave_Click);
             // 
             // tsSaveAs
@@ -104,7 +112,8 @@ namespace LindaUni
             this.tsSaveAs.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsSaveAs.Name = "tsSaveAs";
             this.tsSaveAs.Size = new System.Drawing.Size(34, 28);
-            this.tsSaveAs.Text = "toolStripButton3";
+            this.tsSaveAs.Text = "Save As";
+            this.tsSaveAs.ToolTipText = "Save As";
             this.tsSaveAs.Click += new System.EventHandler(this.tsSaveAs_Click);
             // 
             // tsBold
@@ -114,7 +123,7 @@ namespace LindaUni
             this.tsBold.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBold.Name = "tsBold";
             this.tsBold.Size = new System.Drawing.Size(34, 28);
-            this.tsBold.Text = "toolStripButton4";
+            this.tsBold.Text = "Bold";
             this.tsBold.Click += new System.EventHandler(this.tsBold_Click);
             // 
             // tsItalic
@@ -124,7 +133,7 @@ namespace LindaUni
             this.tsItalic.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsItalic.Name = "tsItalic";
             this.tsItalic.Size = new System.Drawing.Size(34, 28);
-            this.tsItalic.Text = "toolStripButton5";
+            this.tsItalic.Text = "Italic";
             this.tsItalic.Click += new System.EventHandler(this.tsItalic_Click);
             // 
             // tsUnderline
@@ -134,7 +143,7 @@ namespace LindaUni
             this.tsUnderline.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsUnderline.Name = "tsUnderline";
             this.tsUnderline.Size = new System.Drawing.Size(34, 28);
-            this.tsUnderline.Text = "toolStripButton6";
+            this.tsUnderline.Text = "Underline";
             this.tsUnderline.Click += new System.EventHandler(this.tsUnderline_Click);
             // 
             // tsFont
@@ -144,14 +153,9 @@ namespace LindaUni
             this.tsFont.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsFont.Name = "tsFont";
             this.tsFont.Size = new System.Drawing.Size(34, 28);
-            this.tsFont.Text = "toolStripButton7";
+            this.tsFont.Text = "Font";
+            this.tsFont.ToolTipText = "Shows Font Dialog";
             this.tsFont.Click += new System.EventHandler(this.tsFont_Click);
-            // 
-            // tsUserName
-            // 
-            this.tsUserName.Name = "tsUserName";
-            this.tsUserName.Size = new System.Drawing.Size(92, 28);
-            this.tsUserName.Text = "userName";
             // 
             // FrmTxtEdit
             // 
