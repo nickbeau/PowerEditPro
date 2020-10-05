@@ -43,6 +43,10 @@ namespace LindaUni
 
         }
 
+        void cut()
+        {
+            
+        }
         /// <summary>
         /// Occurs when text has changed. Sets dirty to true adds a * to the title of the window and performs undo recording
         /// </summary>
